@@ -3,7 +3,7 @@ from moviepy import VideoFileClip, AudioFileClip
 try:
     print("🎬 Cargando archivos con MoviePy 2.x...")
     # 1. Cargamos el video que grabaste de la pantalla
-    video = VideoFileClip("video_limpio.mp4")
+    video = VideoFileClip("demo.mp4")
     
     # 2. Cargamos la música de fondo
     musica = AudioFileClip("musica.mp3")
@@ -18,13 +18,13 @@ try:
     
     print("💾 Guardando el video final (esto puede tardar unos segundos)...")
     # 5. Exportamos el archivo de video final definitivo
-    video_final.write_videofile("presentacion_final.mp4", codec="libx264", audio_codec="aac")
+    video_final.write_videofile("demo_final.mp4", codec="libx264", audio_codec="aac")
     
     # Cerramos los archivos para liberar la memoria de la PC
     video.close()
     musica.close()
     video_final.close()
-    print("✅ ¡Éxito total! Se ha creado 'presentacion_final.mp4' con la música de fondo perfecta.")
+    print("✅ ¡Éxito total! Se ha creado 'demo_final.mp4' con la música de fondo perfecta.")
 
 except Exception as e:
     print(f"❌ Ocurrió un error: {e}")
